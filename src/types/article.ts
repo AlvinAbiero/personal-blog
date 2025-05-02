@@ -1,3 +1,5 @@
+import "express-session";
+
 export interface Article {
   id: string;
   title: string;
@@ -19,12 +21,4 @@ export interface ArticleCreateInput {
 
 export interface ArticleUpdateInput extends ArticleCreateInput {
   id: string;
-}
-
-// Add additional type definitions for session
-declare module "express-session" {
-  interface SessionData {
-    isAuthenticated: boolean;
-    username?: string;
-  }
 }
