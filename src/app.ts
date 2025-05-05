@@ -6,7 +6,7 @@ import morgan from "morgan";
 import expressLayouts from "express-ejs-layouts";
 import methodOverride from "method-override";
 import { config } from "dotenv";
-import { errorHandler } from "./middlewares/errorHandler";
+import { errorHandler } from "./middleware/errorHandler";
 import guestRoutes from "./routes/guestRoutes";
 import adminRoutes from "./routes/adminRoutes";
 
