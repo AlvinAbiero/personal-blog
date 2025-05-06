@@ -1,0 +1,49 @@
+<div class="add-article-page">
+  <div class="container">
+    <header class="page-header">
+      <h1>Add New Article</h1>
+      <a href="/admin/dashboard" class="back-link">&larr; Back to Dashboard</a>
+    </header>
+
+    <form action="/admin/articles/add" method="POST" class="article-form">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" required />
+      </div>
+
+      <div class="form-group">
+        <label for="content">Content (Markdown supported)</label>
+        <textarea id="content" name="content" rows="15" required></textarea>
+        <div class="form-help">
+          You can use Markdown to format your content.
+          <a href="https://www.markdownguide.org/cheat-sheet/" target="_blank"
+            >Markdown cheat sheet</a
+          >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="tags">Tags (comma separated)</label>
+        <input
+          type="text"
+          id="tags"
+          name="tags"
+          placeholder="e.g. technology, programming, thoughts"
+        />
+        <div class="form-help">
+          Separate tags with commas. E.g., "technology, programming, thoughts"
+        </div>
+      </div>
+
+      <div class="form-check">
+        <input type="checkbox" id="featured" name="featured" />
+        <label for="featured">Feature this article on homepage</label>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Publish Article</button>
+        <a href="/admin/dashboard" class="btn btn-secondary">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>

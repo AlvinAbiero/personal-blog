@@ -1,0 +1,50 @@
+<div class="home-page">
+  <section class="welcome-section">
+    <div class="container">
+      <h1>Welcome to My Personal Blog</h1>
+      <p>Discover thoughts, ideas, and insights on various topics.</p>
+    </div>
+  </section>
+
+  <% if (featuredArticles && featuredArticles.length > 0) { %>
+  <section class="featured-articles">
+    <div class="container">
+      <h2>Featured Articles</h2>
+      <div class="featured-grid">
+        <% featuredArticles.forEach(article => { %> <%-
+        include('../partials/articleCard', { article }) %> <% }); %>
+      </div>
+    </div>
+  </section>
+  <% } %>
+
+  <section class="all-articles">
+    <div class="container">
+      <div class="articles-header">
+        <h2>All Articles</h2>
+
+        <% if (allTags && allTags.length > 0) { %>
+        <div class="tags-filter">
+          <span>Browse by tag:</span>
+          <div class="tags-list">
+            <% allTags.forEach(tag => { %>
+            <a href="/tag/<%= tag %>" class="tag"><%= tag %></a>
+            <% }); %>
+          </div>
+        </div>
+        <% } %>
+      </div>
+
+      <% if (articles && articles.length > 0) { %>
+      <div class="articles-grid">
+        <% articles.forEach(article => { %> <%-
+        include('../partials/articleCard', { article }) %> <% }); %>
+      </div>
+      <% } else { %>
+      <div class="no-articles">
+        <p>No articles found. Check back later!</p>
+      </div>
+      <% } %>
+    </div>
+  </section>
+</div>

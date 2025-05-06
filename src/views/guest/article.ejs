@@ -1,0 +1,34 @@
+<div class="article-page">
+  <div class="container">
+    <article class="article-content">
+      <header class="article-header">
+        <h1 class="article-title"><%= article.title %></h1>
+
+        <div class="article-meta">
+          <div class="article-date">
+            Published on <%= new
+            Date(article.createdAt).toLocaleDateString('en-US', { year:
+            'numeric', month: 'long', day: 'numeric' }) %> <% if
+            (article.updatedAt !== article.createdAt) { %> (Updated: <%= new
+            Date(article.updatedAt).toLocaleDateString('en-US', { year:
+            'numeric', month: 'long', day: 'numeric' }) %>) <% } %>
+          </div>
+
+          <% if (article.tags && article.tags.length > 0) { %>
+          <div class="article-tags">
+            <% article.tags.forEach(tag => { %>
+            <a href="/tag/<%= tag %>" class="article-tag"><%= tag %></a>
+            <% }); %>
+          </div>
+          <% } %>
+        </div>
+      </header>
+
+      <div class="article-body"><%- contentHtml %></div>
+    </article>
+
+    <div class="article-footer">
+      <a href="/" class="back-link">&larr; Back to all articles</a>
+    </div>
+  </div>
+</div>

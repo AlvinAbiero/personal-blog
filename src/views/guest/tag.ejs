@@ -1,0 +1,19 @@
+<div class="tag-page">
+  <div class="container">
+    <header class="tag-header">
+      <h1>Articles tagged with "<%= tag %>"</h1>
+      <a href="/" class="back-link">&larr; Back to all articles</a>
+    </header>
+
+    <% if (articles && articles.length > 0) { %>
+    <div class="articles-grid">
+      <% articles.forEach(article => { %> <%- include('../partials/articleCard',
+      { article }) %> <% }); %>
+    </div>
+    <% } else { %>
+    <div class="no-articles">
+      <p>No articles found with this tag.</p>
+    </div>
+    <% } %>
+  </div>
+</div>

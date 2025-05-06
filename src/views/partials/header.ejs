@@ -1,0 +1,19 @@
+<header class="site-header">
+  <div class="container">
+    <div class="header-content">
+      <h1 class="site-title"><a href="/">Personal Blog</a></h1>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <% if(typeof isAuthenticated !== 'undefined' && isAuthenticated) { %>
+          <li><a href="/admin/dashboard">Dashboard</a></li>
+          <li><a href="/admin/articles/add">New Article</a></li>
+          <li><a href="/admin/logout">Logout</a></li>
+          <% } else { %>
+          <li><a href="/admin/login">Admin</a></li>
+          <% } %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
