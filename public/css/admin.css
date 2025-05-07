@@ -1,0 +1,199 @@
+/* admin.css - Styles specific to the admin section */
+
+/* Admin Dashboard Styles */
+.admin-dashboard {
+  padding: 2rem 0;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  margin-bottom: 0;
+}
+
+.dashboard-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.admin-content {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+
+/* Articles Table Styles */
+.articles-table-container {
+  overflow-x: auto;
+}
+
+.articles-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.articles-table th,
+.articles-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.articles-table th {
+  background-color: var(--lightest-bg);
+  font-weight: 600;
+  color: var(--light-text);
+}
+
+.articles-table tbody tr:hover {
+  background-color: var(--lightest-bg);
+}
+
+.articles-table .title-cell {
+  font-weight: 500;
+}
+
+.articles-table .title-cell a {
+  color: var(--text-color);
+}
+
+.articles-table .title-cell a:hover {
+  color: var(--primary-color);
+}
+
+.articles-table .actions-cell {
+  width: 150px;
+}
+
+.articles-table .article-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.delete-form {
+  margin: 0;
+}
+
+.featured-badge {
+  display: inline-block;
+  background-color: #fdba74;
+  color: #9a3412;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+}
+
+.dashboard-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.dashboard-tag {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+}
+
+/* Add/Edit Article Page Styles */
+.add-article-page,
+.edit-article-page {
+  padding: 2rem 0;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  margin-bottom: 0;
+}
+
+.article-form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--card-shadow);
+}
+
+/* Login Page Styles */
+.login-page {
+  padding: 4rem 0;
+}
+
+.login-form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--card-shadow);
+}
+
+.login-form-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-form {
+  margin-bottom: 1.5rem;
+}
+
+.login-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+}
+
+/* Responsive Admin Styles */
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .article-form {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .articles-table .actions-cell {
+    width: auto;
+  }
+
+  .articles-table th:nth-child(3),
+  .articles-table td:nth-child(3),
+  .articles-table th:nth-child(4),
+  .articles-table td:nth-child(4) {
+    display: none;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions button,
+  .form-actions .btn {
+    width: 100%;
+  }
+}
