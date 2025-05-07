@@ -51,12 +51,12 @@ export async function getArticle(req: Request, res: Response): Promise<void> {
     }
 
     // Parse markdown content to HTML
-    const contentHTML = marked(article.content);
+    const contentHtml = marked(article.content);
 
     res.render("guest/article", {
       title: article.title,
       article,
-      contentHTML,
+      contentHtml,
     });
   } catch (error) {
     console.error("Error fetching article:", error);

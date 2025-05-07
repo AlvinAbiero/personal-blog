@@ -2,9 +2,9 @@ import bcrypt from "bcrypt";
 
 export const ADMIN_USERNAME = "admin";
 
-// store hashed password
+// Updated password hash that correctly matches "adminpass"
 const ADMIN_PASSWORD_HASH =
-  "$2b$10$5dwsS5snIRlKu8ka5r7z0ughUP5JnCR0GcQsP.iWupW1zeGH47hD6"; // 'adminpass'
+  "$2b$10$2G9g0KU8KIGKHPnYd.0s2.fr3RIICF2e0UCl.BzZcr48SCpcOB7Ay"; // 'adminpass'
 
 /**
  * Verify admin credentials

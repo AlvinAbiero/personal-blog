@@ -1,6 +1,6 @@
 import { promisify } from "util";
 import path from "path";
-import fs, { read } from "fs";
+import fs from "fs";
 
 const readFileAsync = promisify(fs.readFile);
 const writeFileAsync = promisify(fs.writeFile);
